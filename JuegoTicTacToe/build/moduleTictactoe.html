@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module TicTacToe &#8212; documentación de TicTacToe - 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=c058f7c8" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=36c4ab74"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="¡Bienvenido a la Documentación del Proyecto TicTacToe!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-tictactoe">
+<h1>Module TicTacToe<a class="headerlink" href="#module-tictactoe" title="Link to this heading">¶</a></h1>
+<dl class="py function" id="module-0">
+<dt class="sig sig-object py" id="tictactoe.actions">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">actions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.actions" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna el conjunto de todas las acciones posibles (i, j) disponibles en el tablero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un conjunto de tuplas (i, j) que representan las posiciones vacías.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>set</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.basic_minimax">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">basic_minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.basic_minimax" title="Link to this definition">¶</a></dt>
+<dd><p>Algoritmo Minimax básico sin Poda Alfa-Beta.</p>
+<p>Explora todo el árbol de juego sin poda.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un tuple con el valor de utilidad y la mejor acción.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.get_columns">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">get_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.get_columns" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna las columnas del tablero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista con las tres columnas del tablero.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.get_diagonal">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">get_diagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.get_diagonal" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna las diagonales del tablero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista con las dos diagonales del tablero.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.initial_state">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">initial_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.initial_state" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna el estado inicial del tablero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Una lista de listas que representa el tablero vacío.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.max_alpha_beta_pruning">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">max_alpha_beta_pruning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.max_alpha_beta_pruning" title="Link to this definition">¶</a></dt>
+<dd><p>Realiza la poda Alfa-Beta para el jugador X (Maximiza).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – El valor alfa para la poda.</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – El valor beta para la poda.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un tuple con el valor de utilidad y la mejor acción.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.min_alpha_beta_pruning">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">min_alpha_beta_pruning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.min_alpha_beta_pruning" title="Link to this definition">¶</a></dt>
+<dd><p>Realiza la poda Alfa-Beta para el jugador O (Minimiza).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – El valor alfa para la poda.</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – El valor beta para la poda.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un tuple con el valor de utilidad y la mejor acción.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.minimax">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.minimax" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna la acción óptima para el jugador actual en el tablero.</p>
+<p>Utiliza Poda Alfa-Beta para optimización.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La mejor acción posible para el jugador actual.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.player">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">player</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.player" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna el jugador que tiene el siguiente turno en el tablero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>“X” si es el turno de X, “O” si es el turno de O.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.result">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.result" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna el tablero que resulta al hacer el movimiento (i, j) en el tablero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p></li>
+<li><p><strong>action</strong> (<em>tuple</em>) – La acción a realizar, una tupla (i, j).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – Si la posición (i, j) ya está ocupada.</p>
+</dd>
+<dt class="field-odd">Devuelve<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Un nuevo tablero con el movimiento realizado.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.terminal">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">terminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.terminal" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna True si el juego ha terminado (ganador o empate), False en caso contrario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>True si hay un ganador o si todas las casillas están llenas, False en caso contrario.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.three_in_a_row">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">three_in_a_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.three_in_a_row" title="Link to this definition">¶</a></dt>
+<dd><p>Verifica si una fila tiene tres elementos iguales.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>row</strong> (<em>list</em>) – Una fila del tablero.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>True si todos los elementos de la fila son iguales y no son None, False en caso contrario.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.utility">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">utility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.utility" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna 1 si X ha ganado, -1 si O ha ganado, 0 en caso contrario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>1 si X ha ganado, -1 si O ha ganado, 0 en caso de empate o si el juego no ha terminado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tictactoe.winner">
+<span class="sig-prename descclassname"><span class="pre">tictactoe.</span></span><span class="sig-name descname"><span class="pre">winner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tictactoe.winner" title="Link to this definition">¶</a></dt>
+<dd><p>Retorna el ganador del juego, si existe.</p>
+<p>Verifica todas las filas, columnas y diagonales.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>list</em>) – El tablero de juego.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>“X” si el jugador X ha ganado, “O” si el jugador O ha ganado, None si no hay ganador.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TicTacToe</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module TicTacToe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.actions"><code class="docutils literal notranslate"><span class="pre">actions()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.basic_minimax"><code class="docutils literal notranslate"><span class="pre">basic_minimax()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.get_columns"><code class="docutils literal notranslate"><span class="pre">get_columns()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.get_diagonal"><code class="docutils literal notranslate"><span class="pre">get_diagonal()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.initial_state"><code class="docutils literal notranslate"><span class="pre">initial_state()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.max_alpha_beta_pruning"><code class="docutils literal notranslate"><span class="pre">max_alpha_beta_pruning()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.min_alpha_beta_pruning"><code class="docutils literal notranslate"><span class="pre">min_alpha_beta_pruning()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.minimax"><code class="docutils literal notranslate"><span class="pre">minimax()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.player"><code class="docutils literal notranslate"><span class="pre">player()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.result"><code class="docutils literal notranslate"><span class="pre">result()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.terminal"><code class="docutils literal notranslate"><span class="pre">terminal()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.three_in_a_row"><code class="docutils literal notranslate"><span class="pre">three_in_a_row()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.utility"><code class="docutils literal notranslate"><span class="pre">utility()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tictactoe.winner"><code class="docutils literal notranslate"><span class="pre">winner()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="capítulo anterior">¡Bienvenido a la Documentación del Proyecto TicTacToe!</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Andres Vivas Palacios, Carlos David Rodriguez, Jhon Arley Forero.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/moduleTictactoe.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
