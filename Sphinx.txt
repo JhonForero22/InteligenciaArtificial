@@ -1,0 +1,8 @@
+pip install sphinx
+sphinx-quickstart
+sphinx-build -b html source/ build/
+
+Configurar conf.py, con las lineas que hay en el archivo
+agregar modulos relacionados con los archivos py
+
+en el archivo index.rst -> configurar el texto plano que va en el archivo html
